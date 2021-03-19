@@ -4,12 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:tint="@color/black_faded"
         android:scaleType="centerCrop"
-        android:src="@drawable/img_1" />
+        android:src="@drawable/img_1"
+        android:tint="@color/black_faded" />
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -50,6 +52,7 @@
             android:drawableStart="@drawable/ic_password_tint"
             android:drawablePadding="20dp"
             android:hint="@string/hint_password"
+            android:inputType="textPassword"
             android:textColor="@color/white"
             android:textSize="20sp" />
 
@@ -58,18 +61,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@id/tv_forgot_password"
-            android:textSize="20dp"
-            android:padding="12dp"
             android:layout_marginTop="40dp"
             android:backgroundTint="@color/teal_700"
-            android:text="@string/txt_signin"
-            android:textColor="@color/white" />
+            android:padding="12dp"
+            android:text="@string/txt_sign_in"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/tv_forgot_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@id/v_signup"
+            android:layout_above="@id/v_sign_up"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="100dp"
             android:gravity="center"
@@ -78,7 +81,7 @@
             android:textSize="18sp" />
 
         <LinearLayout
-            android:id="@+id/v_signup"
+            android:id="@+id/v_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -95,8 +98,10 @@
                 android:textSize="18sp" />
 
             <TextView
+                android:id="@+id/tv_sign_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8dp"
                 android:gravity="center"
                 android:text="@string/txt_sign_up_here"
                 android:textColor="@color/teal_700"
